@@ -4,3 +4,11 @@
 *.jar
 *.war
 *.ear
+
+# Android #
+*.apk
+*.ap_
+*.dex
+bin/
+gen/
+proguard/
