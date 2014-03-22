@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ActivityExample</string>
+    <string name="action_settings">Settings</string>
+    <string name="message">Just look at the logs</string>
+    <string name="launch_btn_text">Launch another one</string>
+    <string name="launch_btn2_text">Launch map</string>
+    <string name="launch_btn3_text">Launch browser</string>
+
+</resources>
