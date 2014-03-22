@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UpDownCounter</string>
+    <string name="action_settings">Settings</string>
+    <string name="inc_btn">Increment</string>
+    <string name="dec_btn">Decrement</string>
+    <string name="task_btn_text">Do something</string>
+
+</resources>
