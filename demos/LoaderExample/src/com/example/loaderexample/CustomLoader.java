@@ -24,7 +24,7 @@ public class CustomLoader extends AsyncTaskLoader<String>{
 	
 	@Override
 	protected boolean onCancelLoad(){
-		Log.d("LOADER_EXAMPLE","CustomLoader: onStartLoad");
+		Log.d("LOADER_EXAMPLE","CustomLoader: onCancelLoad");
 		return false;
 	}
 	
