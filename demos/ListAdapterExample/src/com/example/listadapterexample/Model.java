@@ -4,6 +4,7 @@ public class Model {
 
 	private final String _name;
 	private final long _number;
+	private boolean _selected;
 
 	public Model(String name, long number){
 		_name = name;
@@ -16,6 +17,13 @@ public class Model {
 	
 	public long getNumber(){
 		return _number;
+	}
+	
+	public void setSelected(boolean b){
+		_selected = b;
 	}	
 	
+	public boolean getSelected(){
+		return _selected;
+	}
 }

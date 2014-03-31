@@ -12,17 +12,23 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
 	private static class ItemViewHolder{
 		public final TextView name;
 		public final TextView number;
-		public ItemViewHolder(TextView name, TextView number){
+		public final Switch selected;
+		public ItemViewHolder(TextView name, TextView number, Switch selected){
 			this.name = name;
 			this.number = number;
+			this.selected = selected;
 		}
 	}
 
@@ -51,15 +57,26 @@ public class MainActivity extends Activity {
 				public ItemViewHolder build(View view) {
 					return new ItemViewHolder(
 							(TextView)view.findViewById(R.id.textView1),
-							(TextView)view.findViewById(R.id.textView2)
+							(TextView)view.findViewById(R.id.textView2),
+							(Switch)view.findViewById(R.id.switch1)
 							);
 				}
 			},
 			new ExampleAdapter.Binder<ItemViewHolder,Model>() {			
 				@Override
-				public void bind(ItemViewHolder view, Model model) {
+				public void bind(ItemViewHolder view, final Model model) {
 					view.name.setText(model.getName());
 					view.number.setText(Long.toString(model.getNumber()));
+					view.selected.setOnCheckedChangeListener(null);
+					view.selected.setChecked(model.getSelected());
+					view.selected.setOnCheckedChangeListener(new OnCheckedChangeListener(){
+						@Override
+						public void onCheckedChanged(CompoundButton buttonView,
+								boolean isChecked) {
+							model.setSelected(isChecked);
+							Toast.makeText(MainActivity.this, model.getName()+" changed", Toast.LENGTH_SHORT).show();
+						}						
+					});
 				}
 			},
 			new ExampleAdapter.Appender<ItemViewHolder,Model>(){
