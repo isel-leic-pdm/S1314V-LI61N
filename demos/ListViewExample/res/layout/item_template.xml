@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="horizontal" >    
+    
+	<LinearLayout 
+	    android:layout_width="200dp"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:id="@+id/shortNameTextView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="PDM"
+	        android:textSize="32sp" />
+	    
+	    <TextView
+	        android:id="@+id/longNameTextView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Programação em Dispositivos Móveis" />
 
-    <TextView
-        android:id="@+id/shortNameTextView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PDM"
-        android:textSize="32sp" />
-
-    <TextView
-        android:id="@+id/longNameTextView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Programação em Dispositivos Móveis" />
+    </LinearLayout>
+    
+	<Switch
+	    android:id="@+id/selected"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:gravity="center"
+	    android:text="" />
 
 </LinearLayout>
